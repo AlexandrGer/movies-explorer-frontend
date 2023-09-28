@@ -5,7 +5,7 @@ export const Footer = () => {
 	return (
 
 		<footer className="footer">
-			<div className='section__container'>
+			<div className='footer__wrapper'>
 				<p className='footer__text'>Учебный проект Яндекс.Практикум х BeatFilm.</p>
 				<div className='footer__container'>
 					<p className='footer__copyright'>© 2023</p>

@@ -1,7 +1,7 @@
 .technology {
 	width: 100%;
 	background: #272727;
-	padding: 100px 0 100px 0;
+	padding: 100px 0;
 }
 
 .technology__title {
@@ -31,9 +31,10 @@
 	list-style: none;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	/* justify-content: space-between; */
+	justify-content: center;
 	width: 100%;
-	max-width: 690px;
+	/* max-width: 690px; */
 }
 
 .stack__cell {
@@ -46,6 +47,10 @@
 	justify-content: center;
 }
 
+.stack__cell:not(:last-child) {
+	margin-right: 10px;
+}
+
 .stack__text {
 	font-size: 14px;
 	font-weight: 400;
@@ -54,4 +59,34 @@
 	text-align: center;
 	margin: 0;
 	padding: 0;
+}
+
+@media screen and (max-width: 1023px) {
+	.technology {
+		padding: 90px 0;
+	}
+
+	.technology__title {
+		margin: 80px auto 0;
+	}
+
+	.technology__subtitle {
+		font-size: 12px;
+		line-height: 18px;
+		margin: 22px auto 0;
+	}
+
+	.stack {
+		margin: 83px auto 0;
+	}
+
+	.stack__cell {
+		width: 84px;
+		height: 57px;
+	}
+
+	.stack__text {
+		font-size: 12px;
+		line-height: 14.52px;
+	}
 }

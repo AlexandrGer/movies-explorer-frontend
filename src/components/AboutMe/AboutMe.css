@@ -68,7 +68,7 @@
 .student__link {
 	font-size: 14px;
 	font-weight: 500;
-	line-height: 17px;
+	line-height: 16.94px;
 	letter-spacing: 0em;
 	text-decoration: none;
 	color: #fff;
@@ -127,4 +127,51 @@
 	height: 60px;
 	line-height: 60px;
 	display: inline-block;
+}
+
+@media screen and (max-width: 1023px) {
+	.student {
+		padding: 90px 0;
+	}
+
+	.student__container-description {
+		max-width: 364px;
+	}
+
+	.student__title {
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	.student__subtitle {
+		font-size: 12px;
+		line-height: 18px;
+		margin: 16px 0 0;
+	}
+
+	.student__description {
+		font-size: 12px;
+		line-height: 18px;
+		margin: 20px 0 87px;
+		-ms-line-clamp: 6;
+		-webkit-line-clamp: 6;
+		line-clamp: 6;
+	}
+
+	.student__photo {
+		width: 255px;
+		height: 307px;
+	}
+
+	.portfolio {
+		margin: 91px 0 0;
+	}
+
+	.portfolio__link {
+		font-size: 28px;
+	}
+
+	.portfolio__icon {
+		width: 27px;
+	}
 }

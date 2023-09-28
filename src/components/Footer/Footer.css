@@ -3,10 +3,17 @@
 	background: #202020;
 }
 
+.footer__wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 70px;
+	box-sizing: border-box;
+}
+
 .footer__text {
 	font-size: 13px;
 	font-weight: 400;
-	line-height: 16px;
+	line-height: 15.73px;
 	letter-spacing: 0px;
 	text-align: center;
 	color: #8b8b8b;
@@ -24,7 +31,7 @@
 .footer__copyright {
 	font-size: 13px;
 	font-weight: 400;
-	line-height: 16px;
+	line-height: 15.73px;
 	letter-spacing: 0px;
 	margin: 0;
 }
@@ -38,10 +45,16 @@
 	color: #fff;
 	font-size: 13px;
 	font-weight: 400;
-	line-height: 16px;
+	line-height: 15.73px;
 	letter-spacing: 0px;
 }
 
 .footer__link:not(:last-child) {
 	margin-right: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+	.footer__wrapper {
+		padding: 0 30px;
+	}
 }
