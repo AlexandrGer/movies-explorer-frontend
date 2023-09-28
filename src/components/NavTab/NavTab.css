@@ -1,0 +1,22 @@
+.navigation {
+	height: 66px;
+	background: #272727;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.navigation__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 276px;
+}
+
+.navigation__link {
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 16px;
+	letter-spacing: 0px;
+	color: #fff;
+}

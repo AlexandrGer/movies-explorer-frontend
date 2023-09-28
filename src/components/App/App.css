@@ -4,3 +4,9 @@
 	font-family: 'Inter', Arial, sans-serif;
 	color: white;
 }
+
+.page__container {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+}

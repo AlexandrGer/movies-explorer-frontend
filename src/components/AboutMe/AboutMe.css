@@ -1,0 +1,130 @@
+.student {
+	width: 100%;
+	background: #202020;
+	padding: 110px 0 125px 0;
+}
+
+.student__container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin: 66px 0 0;
+}
+
+.student__container-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	max-width: 600px;
+}
+
+.student__title {
+	font-size: 50px;
+	font-weight: 400;
+	line-height: 58px;
+	letter-spacing: -0.04em;
+	margin: 0;
+}
+
+.student__subtitle {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0px;
+	margin: 18px 0 0;
+}
+
+.student__description {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+	letter-spacing: 0px;
+	margin: 26px 0 99px;
+	padding: 0;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	overflow: overlay;
+	-ms-line-clamp: 4;
+	-webkit-line-clamp: 4;
+	line-clamp: 4;
+	display: -webkit-box;
+	display: box;
+	word-wrap: break-word;
+	-webkit-box-orient: vertical;
+	box-orient: vertical;
+}
+
+.student__description::-webkit-scrollbar {
+	width: 0px;
+}
+
+/* .student__description::-webkit-scrollbar-track {
+	background-color: darkgrey;
+} */
+
+.student__link {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 17px;
+	letter-spacing: 0em;
+	text-decoration: none;
+	color: #fff;
+}
+
+.student__photo {
+	width: 270px;
+	height: 327px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.portfolio {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0px;
+	margin: 101px 0 0;
+	color: #8B8B8B;
+	padding: 0;
+	list-style: none;
+}
+
+.portfolio__item {
+	box-sizing: border-box;
+}
+
+.portfolio__item:first-child {
+	margin-top: 50px;
+}
+
+.portfolio__item:not(:first-child) {
+	margin-top: 20px;
+}
+
+.portfolio__item:not(:last-child) {
+	padding-bottom: 19px;
+	border-bottom: 1px solid #424242;
+}
+
+.portfolio__link {
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 50px;
+	letter-spacing: -0.04em;
+	color: #fff;
+	text-decoration: none;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+}
+
+.portfolio__icon {
+	width: 29px;
+	height: 60px;
+	line-height: 60px;
+	display: inline-block;
+}

@@ -1,9 +1,10 @@
 import React from 'react';
 import './Header.css';
 import logo from '../../images/logo.svg';
-import account from '../../images/account-1.svg';
+// import account from '../../images/account-1.svg';
 
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// import { Routes, Route, Link } from 'react-router-dom';
 
 export const Header = () => {
 	return (

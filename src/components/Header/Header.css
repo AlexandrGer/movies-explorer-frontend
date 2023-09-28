@@ -53,7 +53,10 @@
 	object-fit: none;
 }
 
-.header__authorization {}
+.header__authorization {
+	display: flex;
+	align-items: center;
+}
 
 .header__link-authorization {
 	font-weight: 500;
