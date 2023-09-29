@@ -23,7 +23,7 @@
 }
 
 .list {
-	margin: 0;
+	margin: 70px 0 0;
 	padding: 0;
 	list-style: none;
 	display: flex;
@@ -40,7 +40,7 @@
 	font-weight: 400;
 	line-height: 24px;
 	letter-spacing: -0.04em;
-	margin: 70px 0 26px;
+	margin: 0 0 26px;
 }
 
 .list__text {
@@ -101,7 +101,7 @@
 	}
 
 	.list__heading {
-		margin: 70px 0 22px;
+		margin: 0 0 22px;
 	}
 
 	.list__text {
@@ -120,5 +120,63 @@
 
 	.deadlines__caption {
 		font-weight: 400;
+	}
+}
+
+@media screen and (max-width: 424px) {
+	.about {
+		padding: 70px 0 69px;
+	}
+
+	.section__container {
+		padding: 0 18px;
+	}
+
+	.section__title {
+		font-size: 18px;
+		line-height: 21.78px;
+		padding-bottom: 28px;
+	}
+
+	.list {
+		margin: 60px 0;
+		flex-direction: column;
+	}
+
+	.list__cell {
+		max-width: 284px;
+	}
+
+	.list__cell:not(:last-of-type) {
+		margin-bottom: 56px;
+	}
+
+	.list__heading {
+		font-size: 18px;
+		line-height: 21.78px;
+		margin: 0 0 16px;
+	}
+
+	.list__text {
+		font-size: 11px;
+		line-height: 16px;
+		margin: 0;
+	}
+
+	.deadlines {
+		grid-template-columns: 100px 1fr;
+	}
+
+	.deadlines__text {
+		font-size: 11px;
+		line-height: 13.31px;
+		margin: 0 0 10px;
+		padding: 11px 0;
+	}
+
+	.deadlines__caption {
+		font-size: 11px;
+		font-weight: 400;
+		line-height: 13.31px;
 	}
 }

@@ -6,7 +6,7 @@ export const AboutMe = () => {
 	return (
 
 		<section className="student">
-			<div className='section__container'>
+			<div className='section__container section__container_size_s'>
 				<h3 className='section__title'>Студент</h3>
 				<div className='student__container'>
 					<div className='student__container-description'>

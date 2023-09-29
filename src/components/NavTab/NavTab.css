@@ -9,8 +9,9 @@
 .navigation__container {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	width: 276px;
+	justify-content: center;
+	/* justify-content: space-between; */
+	/* width: 276px; */
 }
 
 .navigation__link {
@@ -19,4 +20,18 @@
 	line-height: 16px;
 	letter-spacing: 0px;
 	color: #fff;
+}
+
+.navigation__link:not(:last-child) {
+	margin-right: 40px;
+}
+
+@media screen and (max-width: 424px) {
+	.navigation__link {
+		font-size: 11px;
+	}
+
+	.navigation__link:not(:last-child) {
+		margin-right: 24px;
+	}
 }

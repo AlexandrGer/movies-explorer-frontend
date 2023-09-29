@@ -86,3 +86,21 @@
 	}
 
 }
+
+@media screen and (max-width: 424px) {
+	.header__container {
+		padding: 0 14px;
+	}
+
+	.header__link-authorization {
+		font-size: 10px;
+	}
+
+	.header__link-authorization:last-child {
+		margin-left: 14px;
+	}
+
+	.header__link-authorization_theme_green {
+		padding: 5px 12px;
+	}
+}

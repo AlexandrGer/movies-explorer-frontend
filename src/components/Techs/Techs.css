@@ -90,3 +90,33 @@
 		line-height: 14.52px;
 	}
 }
+
+@media screen and (max-width: 424px) {
+	.technology {
+		padding: 70px 0;
+	}
+
+	.technology__title {
+		font-size: 30px;
+		line-height: 36.31px;
+		margin: 60px auto 0;
+	}
+
+	.technology__subtitle {
+		font-size: 11px;
+		line-height: 16px;
+		margin: 24px auto 0;
+		max-width: 292px;
+	}
+
+	.stack {
+		margin: 50px auto 0;
+		display: grid;
+		grid-template-columns: 84px 84px;
+		grid-gap: 10px;
+	}
+
+	.stack__cell:not(:last-child) {
+		margin: 0;
+	}
+}

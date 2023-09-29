@@ -18,7 +18,7 @@
 .logo-promo {
 	width: 320px;
 	height: 320px;
-	z-index: 1;
+	/* z-index: 1; */
 	position: absolute;
 	/* left: 37.5%;
 	top: 15.5%; */
@@ -32,4 +32,19 @@
 		padding: 326px 0 342px 0;
 	}
 
+}
+
+@media screen and (max-width: 424px) {
+	.promo__title {
+		padding: 207px 0 246px 0;
+		font-size: 31px;
+		line-height: 39px;
+		max-width: 300px;
+	}
+
+	.logo-promo {
+		width: 248px;
+		height: 248px;
+		top: 47%;
+	}
 }
