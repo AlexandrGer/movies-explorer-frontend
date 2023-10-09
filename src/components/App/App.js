@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { Main } from '../Main/Main';
 import './App.css';
 import { Movies } from '../Movies/Movies';
