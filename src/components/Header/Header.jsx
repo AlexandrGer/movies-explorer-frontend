@@ -1,35 +1,30 @@
 import React from 'react';
 import './Header.css';
 import logo from '../../images/logo.svg';
-// import account from '../../images/account-1.svg';
+import { Navigation } from '../Navigation/Navigation';
+import { Link, useLocation } from 'react-router-dom';
+import { NavAuth } from '../NavAuth/NavAuth';
+import { BurgerButton } from '../BurgerButton/BurgerButton';
 
-import { Link } from 'react-router-dom';
-// import { Routes, Route, Link } from 'react-router-dom';
+export const Header = ({ isLoggedIn, onOpen, onClose }) => {
+	const { pathname } = useLocation();
 
-export const Header = () => {
 	return (
-
-		<header className="header">
-			<div className="header__container">
-				<div className='header__navigation'>
-					<Link to="#" className='header__link'>
-						<img src={logo} alt="Логотип" className="header__logo" />
-					</Link>
-					{/* Авторизованный пользователь */}
-					{/* <Link to="#" className="header__link">Фильмы</Link>
-					<Link to="#" className="header__link">Сохранённые фильмы</Link> */}
-				</div>
-				{/* <Link to="#" className="header__link-account">
-					<img src={account} alt="Аккаунт" className='header__account-icon' />
-				</Link> */}
-
-
-				<div className='header__authorization'>
-					<Link to="#" className="header__link-authorization">Регистрация</Link>
-					<Link to="#" className="header__link-authorization header__link-authorization_theme_green">Войти</Link>
+		<header className={pathname === '/' ? 'header header_color_blue' : 'header'}>
+			< div className="header__container" >
+				<Link to="/" className='header__link'>
+					<img src={logo} alt="Логотип" className="header__logo" />
+				</Link>
+				<div className='header__wrapper'>
+					{isLoggedIn ?
+						<>
+							<div className='header__navigation'>
+								<Navigation onClose={onClose} />
+							</div>
+							<BurgerButton onOpen={onOpen} />
+						</> : <NavAuth />}
 				</div>
 			</div>
-
-		</header>
+		</header >
 	)
 }
