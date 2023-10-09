@@ -4,17 +4,17 @@ import './AboutProject.css';
 export const AboutProject = () => {
 	return (
 
-		<section className="about">
-			<div className='section__container'>
+		<section className="aboutProject" id='aboutProject'>
+			<div className='section'>
 				<h2 className='section__title'>О проекте</h2>
-				<ul className='list'>
-					<li className='list__cell'>
-						<h3 className='list__heading'>Дипломный проект включал 5 этапов</h3>
-						<p className='list__text'>Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.</p>
+				<ul className='aboutProject-info'>
+					<li className='aboutProject-info__cell'>
+						<h3 className='aboutProject-info__heading'>Дипломный проект включал 5 этапов</h3>
+						<p className='aboutProject-info__text'>Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.</p>
 					</li>
-					<li className='list__cell'>
-						<h3 className='list__heading'>На выполнение диплома ушло 5 недель</h3>
-						<p className='list__text'>У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.</p>
+					<li className='aboutProject-info__cell'>
+						<h3 className='aboutProject-info__heading'>На выполнение диплома ушло 5 недель</h3>
+						<p className='aboutProject-info__text'>У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.</p>
 					</li>
 				</ul>
 				<ul className='deadlines'>

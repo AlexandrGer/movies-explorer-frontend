@@ -1,12 +1,11 @@
-.about {
+.aboutProject {
 	width: 100%;
 	background: #202020;
 	padding: 110px 0;
 }
 
-.section__container {
+.section {
 	width: 100%;
-	/* max-width: 1140px; */
 	margin: 0 auto;
 	padding: 0 70px;
 	box-sizing: border-box;
@@ -20,9 +19,10 @@
 	margin: 0;
 	padding-bottom: 23px;
 	border-bottom: 1px solid #DADADA;
+	height: 27px;
 }
 
-.list {
+.aboutProject-info {
 	margin: 70px 0 0;
 	padding: 0;
 	list-style: none;
@@ -30,12 +30,12 @@
 	justify-content: space-between;
 }
 
-.list__cell {
+.aboutProject-info__cell {
 	width: 100%;
 	max-width: 550px;
 }
 
-.list__heading {
+.aboutProject-info__heading {
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 24px;
@@ -43,7 +43,7 @@
 	margin: 0 0 26px;
 }
 
-.list__text {
+.aboutProject-info__text {
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 20px;
@@ -73,6 +73,7 @@
 	margin: 0 0 14px;
 	padding: 9px 0;
 	background: #303030;
+	height: 18px;
 }
 
 .deadlines__text_theme_green {
@@ -91,26 +92,32 @@
 	color: #8B8B8B;
 }
 
+@media screen and (max-width: 1279px) {
+	.aboutProject-info__cell {
+		max-width: 400px;
+	}
+}
+
 @media screen and (max-width: 1023px) {
-	.about {
+	.aboutProject {
 		padding: 90px 0;
 	}
 
-	.section__container {
+	.section {
 		padding: 0 50px;
 	}
 
-	.list__heading {
+	.aboutProject-info__heading {
 		margin: 0 0 22px;
 	}
 
-	.list__text {
+	.aboutProject-info__text {
 		font-size: 12px;
 		line-height: 18px;
 		margin: 0 0 93px;
 	}
 
-	.list__cell {
+	.aboutProject-info__cell {
 		max-width: 319px;
 	}
 
@@ -123,12 +130,18 @@
 	}
 }
 
+@media screen and (max-width: 767px) {
+	.aboutProject-info__cell {
+		max-width: 277px;
+	}
+}
+
 @media screen and (max-width: 424px) {
-	.about {
+	.aboutProject {
 		padding: 70px 0 69px;
 	}
 
-	.section__container {
+	.section {
 		padding: 0 18px;
 	}
 
@@ -136,28 +149,30 @@
 		font-size: 18px;
 		line-height: 21.78px;
 		padding-bottom: 28px;
+		height: 22px;
 	}
 
-	.list {
+	.aboutProject-info {
 		margin: 60px 0;
 		flex-direction: column;
 	}
 
-	.list__cell {
+	.aboutProject-info__cell {
 		max-width: 284px;
 	}
 
-	.list__cell:not(:last-of-type) {
+	.aboutProject-info__cell:not(:last-of-type) {
 		margin-bottom: 56px;
 	}
 
-	.list__heading {
+	.aboutProject-info__heading {
 		font-size: 18px;
 		line-height: 21.78px;
 		margin: 0 0 16px;
+		height: 44px;
 	}
 
-	.list__text {
+	.aboutProject-info__text {
 		font-size: 11px;
 		line-height: 16px;
 		margin: 0;
@@ -172,6 +187,7 @@
 		line-height: 13.31px;
 		margin: 0 0 10px;
 		padding: 11px 0;
+		height: 13px;
 	}
 
 	.deadlines__caption {

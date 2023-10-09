@@ -6,6 +6,10 @@
 	background: linear-gradient(#073042 19%, #272727 19% 21.1%, #202020 21.1% 40.38%, #272727 40.38% 60.2%, #202020 60.2%);
 }
 
+.page_color_dark {
+	background: #202020;
+}
+
 .page__container {
 	width: 100%;
 	max-width: 1280px;
