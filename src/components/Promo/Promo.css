@@ -18,18 +18,19 @@
 .logo-promo {
 	width: 320px;
 	height: 320px;
-	/* z-index: 1; */
 	position: absolute;
-	/* left: 37.5%;
-	top: 15.5%; */
-	top: 50%;
 	left: 50%;
+	top: 46%;
 	transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 1023px) {
 	.promo__title {
 		padding: 326px 0 342px 0;
+	}
+
+	.logo-promo {
+		top: 49%
 	}
 
 }

@@ -47,6 +47,12 @@
 	font-weight: 400;
 	line-height: 15.73px;
 	letter-spacing: 0px;
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.footer__link:hover {
+	opacity: 0.7;
 }
 
 .footer__link:not(:last-child) {
@@ -66,8 +72,9 @@
 
 	.footer__text {
 		font-size: 12px;
-		line-height: 14.52px;
+		line-height: 15px;
 		padding: 0 0 21px;
+
 	}
 
 	.footer__container {
@@ -78,7 +85,7 @@
 
 	.footer__copyright {
 		font-size: 12px;
-		line-height: 14.52px;
+		line-height: 15px;
 	}
 
 	.footer__links {
@@ -89,7 +96,7 @@
 
 	.footer__link {
 		font-size: 12px;
-		line-height: 14.52px;
+		line-height: 15px;
 	}
 
 	.footer__link:not(:last-child) {

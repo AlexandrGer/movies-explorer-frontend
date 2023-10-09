@@ -8,6 +8,7 @@ import { AboutMe } from '../AboutMe/AboutMe';
 import { Footer } from '../Footer/Footer';
 
 export const Main = () => {
+
 	return (
 
 		<main className="content">
