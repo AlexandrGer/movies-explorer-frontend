@@ -8,10 +8,10 @@ export const MoviesCardList = ({ movies }) => {
 	const { pathname } = useLocation();
 
 	return (
-		<section className="moviesCardList">
+		<section className="card-list">
 			{movies.length > 0 ? (
 				<>
-					<ul className={`moviesCardList__items ${pathname === '/saved-movies' ? 'moviesCardList__items_size_b' : ''}`}>
+					<ul className={`card-list__items ${pathname === '/saved-movies' ? 'card-list__items_size_b' : ''}`}>
 						{movies.map((movie) => (
 							<MoviesCard
 								key={movie._id}
@@ -24,7 +24,7 @@ export const MoviesCardList = ({ movies }) => {
 					<ShowMore></ShowMore>
 				</>
 			) : (
-				<p className='moviesCardList__text'>Ничего не найдено</p>
+				<p className='card-list__text'>Ничего не найдено</p>
 			)}
 
 

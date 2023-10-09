@@ -4,14 +4,14 @@ import { Navigation } from '../Navigation/Navigation';
 
 export const BurgerMenu = ({ onOpen, onClose }) => {
 	return (
-		<section className={`burgerMenu ${onOpen ? 'burgerMenu_opened' : ''}`}>
-			<div className="burgerMenu__container">
+		<section className={`burger-menu ${onOpen ? 'burger-menu_opened' : ''}`}>
+			<div className="burger-menu__container">
 				<button
-					className="button burgerMenu__button"
+					className="button burger-menu__button"
 					type="button"
 					aria-label="Закрыть"
 					onClick={onClose} />
-				<div className="burgerMenu__navigation">
+				<div className="burger-menu__navigation">
 					<Navigation onClose={onClose} />
 				</div>
 			</div>

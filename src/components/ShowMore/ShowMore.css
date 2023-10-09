@@ -1,12 +1,12 @@
-.showMore {
+.show-more {
 	padding: 50px 0 80px;
 }
 
-.showMore_disable {
+.show-more_disable {
 	display: none;
 }
 
-.showMore__button {
+.show-more__button {
 	font-size: 12px;
 	font-weight: 500;
 	line-height: 14.52px;
@@ -21,10 +21,10 @@
 	transition: opacity 0.3s ease-in-out;
 }
 
-.showMore__button:hover {
+.show-more__button:hover {
 	opacity: 0.8;
 }
 
-.showMore__button_disable {
+.show-more__button_disable {
 	display: none;
 }

@@ -1,4 +1,4 @@
-.navTab {
+.nav-tab {
 	height: 66px;
 	background: #272727;
 	display: flex;
@@ -6,13 +6,13 @@
 	justify-content: center;
 }
 
-.navTab__container {
+.nav-tab__container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.navTab__link {
+.nav-tab__link {
 	font-size: 13px;
 	font-weight: 500;
 	line-height: 16px;
@@ -22,20 +22,20 @@
 	transition: opacity 0.3s ease-in-out;
 }
 
-.navTab__link:hover {
+.nav-tab__link:hover {
 	opacity: 0.7;
 }
 
-.navTab__link:not(:last-child) {
+.nav-tab__link:not(:last-child) {
 	margin-right: 40px;
 }
 
 @media screen and (max-width: 424px) {
-	.navTab__link {
+	.nav-tab__link {
 		font-size: 11px;
 	}
 
-	.navTab__link:not(:last-child) {
+	.nav-tab__link:not(:last-child) {
 		margin-right: 24px;
 	}
 }

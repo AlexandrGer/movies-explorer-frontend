@@ -18,7 +18,7 @@ import { initialMovies } from '../moviesList';
 function App() {
 
 	const { pathname } = useLocation();
-	const [isLoggedIn, setIsLoggedIn] = useState(true);
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	const [burgerIsOpened, setBurgerIsOpened] = useState(false);
 	const [movies, setMovies] = useState(initialMovies);
 

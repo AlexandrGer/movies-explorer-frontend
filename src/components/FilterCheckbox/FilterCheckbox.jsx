@@ -4,15 +4,15 @@ import './FilterCheckbox.css';
 export const FilterCheckbox = () => {
 
 	return (
-		<div className="filterCheckbox">
-			<label class="filterCheckbox__switch">
+		<div className="filter-checkbox">
+			<label class="filter-checkbox__switch">
 				<input
-					className='filterCheckbox__input'
+					className='filter-checkbox__input'
 					name='shortFilms'
 					type="checkbox" />
-				<div class="filterCheckbox__slider"></div>
+				<div class="filter-checkbox__slider"></div>
 			</label>
-			<p className="filterCheckbox__text">Короткометражки</p>
+			<p className="filter-checkbox__text">Короткометражки</p>
 		</div>
 	);
 }

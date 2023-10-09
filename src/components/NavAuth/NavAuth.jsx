@@ -6,13 +6,13 @@ import './NavAuth.css';
 export const NavAuth = () => {
 
 	return (
-		<nav className="navAuth">
-			<ul className='navAuth__items'>
-				<li className='navAuth__item'>
-					<Link to="/signup" className="navAuth__link">Регистрация</Link>
+		<nav className="nav-auth">
+			<ul className='nav-auth__items'>
+				<li className='nav-auth__item'>
+					<Link to="/signup" className="nav-auth__link">Регистрация</Link>
 				</li>
-				<li className='navAuth__item'>
-					<Link to="/signin" className="navAuth__link navAuth__link_theme_green">Войти</Link>
+				<li className='nav-auth__item'>
+					<Link to="/signin" className="nav-auth__link nav-auth__link_theme_green">Войти</Link>
 				</li>
 			</ul>
 		</nav>

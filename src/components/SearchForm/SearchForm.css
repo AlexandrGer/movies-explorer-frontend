@@ -1,13 +1,13 @@
-.searchForm {
+.search-form {
 	position: relative;
 }
 
-.searchForm__container {
+.search-form__container {
 	display: flex;
 	flex-direction: column;
 }
 
-.searchForm__input {
+.search-form__input {
 	width: 100%;
 	background: #2F2F2F;
 	height: 46px;
@@ -25,11 +25,11 @@
 	outline: none;
 }
 
-.searchForm__input:focus {
+.search-form__input:focus {
 	border: 1px solid #A0A0A0;
 }
 
-.searchForm__button {
+.search-form__button {
 	position: absolute;
 	width: 80px;
 	height: 34px;
@@ -45,11 +45,11 @@
 	right: -34px;
 }
 
-.searchForm__button:hover {
+.search-form__button:hover {
 	opacity: 0.8;
 }
 
-.searchForm__error {
+.search-form__error {
 	font-size: 10px;
 	font-weight: 400;
 	line-height: 12px;
@@ -63,13 +63,13 @@
 	height: 12px;
 }
 
-.searchForm__error_hidden {
+.search-form__error_hidden {
 	visibility: hidden;
 }
 
 
 @media screen and (max-width: 424px) {
-	.searchForm__input {
+	.search-form__input {
 		padding: 0 0 0 19px;
 		font-size: 11px;
 	}

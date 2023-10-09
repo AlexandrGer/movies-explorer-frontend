@@ -1,4 +1,4 @@
-.aboutProject {
+.about-project {
 	width: 100%;
 	background: #202020;
 	padding: 110px 0;
@@ -22,7 +22,7 @@
 	height: 27px;
 }
 
-.aboutProject-info {
+.about-project-info {
 	margin: 70px 0 0;
 	padding: 0;
 	list-style: none;
@@ -30,12 +30,12 @@
 	justify-content: space-between;
 }
 
-.aboutProject-info__cell {
+.about-project-info__cell {
 	width: 100%;
 	max-width: 550px;
 }
 
-.aboutProject-info__heading {
+.about-project-info__heading {
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 24px;
@@ -43,7 +43,7 @@
 	margin: 0 0 26px;
 }
 
-.aboutProject-info__text {
+.about-project-info__text {
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 20px;
@@ -93,13 +93,13 @@
 }
 
 @media screen and (max-width: 1279px) {
-	.aboutProject-info__cell {
+	.about-project-info__cell {
 		max-width: 400px;
 	}
 }
 
 @media screen and (max-width: 1023px) {
-	.aboutProject {
+	.about-project {
 		padding: 90px 0;
 	}
 
@@ -107,17 +107,17 @@
 		padding: 0 50px;
 	}
 
-	.aboutProject-info__heading {
+	.about-project-info__heading {
 		margin: 0 0 22px;
 	}
 
-	.aboutProject-info__text {
+	.about-project-info__text {
 		font-size: 12px;
 		line-height: 18px;
 		margin: 0 0 93px;
 	}
 
-	.aboutProject-info__cell {
+	.about-project-info__cell {
 		max-width: 319px;
 	}
 
@@ -131,13 +131,13 @@
 }
 
 @media screen and (max-width: 767px) {
-	.aboutProject-info__cell {
+	.about-project-info__cell {
 		max-width: 277px;
 	}
 }
 
 @media screen and (max-width: 424px) {
-	.aboutProject {
+	.about-project {
 		padding: 70px 0 69px;
 	}
 
@@ -152,27 +152,27 @@
 		height: 22px;
 	}
 
-	.aboutProject-info {
+	.about-project-info {
 		margin: 60px 0;
 		flex-direction: column;
 	}
 
-	.aboutProject-info__cell {
+	.about-project-info__cell {
 		max-width: 284px;
 	}
 
-	.aboutProject-info__cell:not(:last-of-type) {
+	.about-project-info__cell:not(:last-of-type) {
 		margin-bottom: 56px;
 	}
 
-	.aboutProject-info__heading {
+	.about-project-info__heading {
 		font-size: 18px;
 		line-height: 21.78px;
 		margin: 0 0 16px;
 		height: 44px;
 	}
 
-	.aboutProject-info__text {
+	.about-project-info__text {
 		font-size: 11px;
 		line-height: 16px;
 		margin: 0;
