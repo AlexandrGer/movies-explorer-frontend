@@ -1,0 +1,22 @@
+.movies {
+	background: #202020;
+}
+
+.form-container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 60px 70px 10px;
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 1023px) {
+	.form-container {
+		padding: 80px 30px 10px;
+	}
+}
+
+@media screen and (max-width: 424px) {
+	.form-container {
+		padding: 80px 14px 10px;
+	}
+}

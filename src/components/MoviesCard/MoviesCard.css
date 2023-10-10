@@ -1,0 +1,122 @@
+.movies-card {
+	background: #222222;
+	box-shadow: 0px 4px 30px 0px #00000014;
+	border-radius: 6px;
+}
+
+.movies-card:hover {
+	cursor: pointer;
+}
+
+.movies-card__img {
+	border-radius: 6px 6px 0 0;
+	width: 100%;
+	height: 203px;
+	display: block;
+}
+
+.movies-card__container {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.movies-card__name {
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 15.73px;
+	letter-spacing: 0px;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+	max-width: 290px;
+	box-sizing: border-box;
+	padding: 0 12px 0 0;
+	margin: 16px 0 0 16px;
+}
+
+.movies-card__time {
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 13.31px;
+	letter-spacing: 0px;
+	text-align: left;
+	color: #8b8b8b;
+	margin: 17px 0 16px 16px;
+}
+
+.movies-card__button {
+	width: 30px;
+	height: 30px;
+	background-image: url(../../images/like-off.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100px 32px;
+	background-color: rgba(0, 0, 0, 0);
+	margin: 0px 16px 0 0;
+	position: relative;
+	top: 6px;
+}
+
+.movies-card__button_active {
+	background-image: url(../../images/like-on.svg);
+}
+
+.movies-card__button_delete {
+	background-image: url(../../images/delete.svg);
+	visibility: hidden;
+}
+
+.movies-card:hover .movies-card__button_delete {
+	visibility: visible;
+}
+
+@media screen and (max-width: 1023px) {
+	.movies-card__img {
+		height: 190px;
+	}
+
+	.movies-card__name {
+		max-width: 260px;
+		padding: 0 21px 0 0;
+		margin: 14px 0 0 14px;
+	}
+
+	.movies-card__button {
+		margin: 0px 14px 0 0;
+		top: 8px;
+	}
+
+	.movies-card__time {
+		margin: 15px 0 14px 14px;
+	}
+}
+
+@media screen and (max-width: 424px) {
+	.movies-card__img {
+		height: 168px;
+	}
+
+	.movies-card__name {
+		font-size: 12px;
+		line-height: 15px;
+		max-width: 240px;
+		padding: 0 6px 0 0;
+		margin: 14px 0 0 14px;
+	}
+
+	.movies-card__button {
+		margin: 0px 10px 0 0;
+		top: 7px;
+	}
+
+	.movies-card__time {
+		font-size: 10px;
+		line-height: 12px;
+		margin: 14px 0 13px 14px;
+	}
+}
