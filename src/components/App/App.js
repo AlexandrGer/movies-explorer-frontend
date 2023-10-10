@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Main } from '../Main/Main';
 import './App.css';
 import { Movies } from '../Movies/Movies';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate, useNavigate } from 'react-router-dom';
 import { ProtectedRoute } from '../ProtectedRoute';
 import { SavedMovies } from '../SavedMovies/SavedMovies';
 import { Register } from '../Register/Register';
@@ -11,13 +11,14 @@ import { Header } from '../Header/Header';
 import { Profile } from '../Profile/Profile';
 import { PageNotFound } from '../PageNotFound/PageNotFound';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
+import { auth } from '../../utils/AuthApi';
 // Временно
 import { initialMovies } from '../moviesList';
 import { Footer } from '../Footer/Footer';
 
 
 function App() {
-
+	const navigate = useNavigate();
 	const { pathname } = useLocation();
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	const [burgerIsOpened, setBurgerIsOpened] = useState(false);
@@ -31,6 +32,14 @@ function App() {
 		setBurgerIsOpened(false);
 	}
 
+	function handleRegister(data) {
+		auth.register(data).then(() => {
+			navigate('/signin')
+		}).catch((err) => {
+			console.log(err);
+		})
+	}
+
 
 	return (
 		<div className={pathname === '/' ? 'page' : 'page page_color_dark'}>
@@ -40,7 +49,7 @@ function App() {
 				{isLoggedIn && <BurgerMenu onOpen={burgerIsOpened} onClose={burgerClose} />}
 				<main>
 					<Routes>
-						<Route path='/signup' element={<Register />} />
+						<Route path='/signup' element={<Register onRegister={handleRegister} />} />
 						<Route path='/signin' element={<Login />} />
 						<Route path='/' element={<Main />} />
 						<Route path='/movies' element={

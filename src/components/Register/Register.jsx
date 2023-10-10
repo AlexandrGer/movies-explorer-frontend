@@ -3,12 +3,33 @@ import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import '../FormAuth/FormAuth.css';
 
-export const Register = () => {
+export const Register = ({ onRegister }) => {
 
-	const [isValid, setIsValid] = useState(false);
+	const [isValid, setIsValid] = useState(true);
+
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+	const [name, setName] = useState('')
+
+	function handleChangeName(e) {
+		setName(e.target.value);
+	}
+
+	function handleChangeEmail(e) {
+		setEmail(e.target.value);
+	}
+
+	function handleChangePassword(e) {
+		setPassword(e.target.value);
+	}
 
 	function handleSubmit(e) {
 		e.preventDefault();
+		onRegister({
+			name: name,
+			password: password,
+			email: email
+		})
 	}
 
 	return (
@@ -28,6 +49,8 @@ export const Register = () => {
 							name='name'
 							type='text'
 							placeholder='Имя'
+							value={name || ''}
+							onChange={handleChangeName}
 							required />
 						<span className={isValid ? 'form__error form__error_hidden' : 'form__error'}></span>
 					</div>
@@ -39,6 +62,8 @@ export const Register = () => {
 							name='email'
 							type='email'
 							placeholder='E-mail'
+							value={email || ''}
+							onChange={handleChangeEmail}
 							required />
 						<span className={isValid ? 'form__error form__error_hidden' : 'form__error'}></span>
 					</div>
@@ -49,10 +74,12 @@ export const Register = () => {
 							name='password'
 							type='password'
 							placeholder='Пароль'
+							value={password || ''}
+							onChange={handleChangePassword}
 							required />
-						<span className={isValid ? 'form__error form__error_hidden' : 'form__error'}>Что-то пошло не так...</span>
+						<span className={isValid ? 'form__error form__error_hidden' : 'form__error'}></span>
 					</div>
-					<span className='form__error form__error_type_server form__error_hidden'>При регистрации пользователя произошла ошибка.</span>
+					<span className='form__error form__error_type_server form__error_hidden'></span>
 					<button
 						className={isValid ? 'button form__button' : 'button form__button form__button_disable'}
 						type='submit'
