@@ -29,8 +29,8 @@ export const MoviesCard = ({ name, img, duration }) => {
 						aria-label='Лайкнуть/Убрать лайк'
 						onClick={toggleLike} ></button>
 				)}
-				<time className='movies-card__time'>{`${hour}ч ${minute}м`}</time>
+				<span className='movies-card__time'>{`${hour}ч ${minute}м`}</span>
 			</div>
-		</li>
+		</li >
 	);
 }

@@ -15,6 +15,7 @@
 .form__link {
 	display: block;
 	height: 38px;
+	width: 38px;
 	opacity: 1;
 	transition: opacity 0.3s ease-in-out;
 }
@@ -57,7 +58,7 @@
 	letter-spacing: 0em;
 	text-align: left;
 	width: 100%;
-	height: 46px;
+	min-height: 46px;
 	border-radius: 8px;
 	background-color: #2f2f2f;
 	border: 0;
@@ -86,7 +87,7 @@
 	display: block;
 	margin-top: 10px;
 	visibility: visible;
-	height: 12px;
+	min-height: 12px;
 }
 
 .form__error_hidden {
@@ -99,7 +100,7 @@
 	line-height: 13px;
 	text-align: center;
 	margin-top: 35px;
-	height: 14px;
+	min-height: 14px;
 	margin-bottom: 20px;
 }
 

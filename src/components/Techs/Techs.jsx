@@ -6,8 +6,8 @@ export const Techs = () => {
 
 		<section className="technology" id='technology'>
 			<div className='section'>
-				<h3 className='section__title'>Технологии</h3>
-				<h2 className='technology__title'>7 технологий</h2>
+				<h2 className='section__title'>Технологии</h2>
+				<h3 className='technology__title'>7 технологий</h3>
 				<p className='technology__subtitle'>На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
 				<ul className='stack'>
 					<li className='stack__cell'>

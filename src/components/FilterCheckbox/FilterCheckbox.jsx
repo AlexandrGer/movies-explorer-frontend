@@ -5,14 +5,15 @@ export const FilterCheckbox = () => {
 
 	return (
 		<div className="filter-checkbox">
-			<label class="filter-checkbox__switch">
+			<label className="filter-checkbox__switch" >
 				<input
 					className='filter-checkbox__input'
+					id='checkbox'
 					name='shortFilms'
 					type="checkbox" />
-				<div class="filter-checkbox__slider"></div>
+				<span className="filter-checkbox__slider"></span>
 			</label>
-			<p className="filter-checkbox__text">Короткометражки</p>
+			<label className="filter-checkbox__text" htmlFor="checkbox">Короткометражки</label>
 		</div>
 	);
 }

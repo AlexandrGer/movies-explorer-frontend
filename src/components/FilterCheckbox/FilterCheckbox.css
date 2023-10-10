@@ -16,6 +16,7 @@
 	margin: 0;
 	margin-left: 12px;
 	order: 1;
+	cursor: pointer;
 }
 
 .filter-checkbox__switch {

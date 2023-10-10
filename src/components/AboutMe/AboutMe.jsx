@@ -7,17 +7,19 @@ export const AboutMe = () => {
 
 		<section className="about-me" id='student'>
 			<div className='section section_size_s'>
-				<h3 className='section__title'>Студент</h3>
+				<h2 className='section__title'>Студент</h2>
 				<div className='about-me__container'>
 					<div className='about-me__container-description'>
-						<h2 className='about-me__title'>Александр</h2>
-						<h3 className='about-me__subtitle'>Фронтенд-разработчик, 26 лет</h3>
-						<p className='about-me__description'>Я родился в городе Набережные Челны республики Татарстан. Живу в Москве, закончил институт экономики и управления АПК в РГАУ-МСХА им. К.А. Тимирязева. У меня есть жена. Я люблю слушать музыку, а ещё увлекаюсь сериалами. Недавно начал кодить. Раньше работал в компании ЗАО «Incarnet». После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.</p>
+						<h3 className='about-me__title'>Александр</h3>
+						<p className='about-me__subtitle'>Фронтенд-разработчик, 26 лет</p>
+						<p className='about-me__description'>Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить.
+							С 2015 года работал в компании «СКБ Контур». После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.</p>
 						<a href="https://github.com/AlexandrGer" target='blank' className='about-me__link'>Github</a>
 					</div>
 					<img src={photo} alt="Фото студента" className='about-me__photo' />
 				</div>
-				<ul className='portfolio'> Портфолио
+				<h4 className='portfolio__title'>Портфолио</h4>
+				<ul className='portfolio'>
 					<li className='portfolio__item'>
 						<a href="https://github.com/AlexandrGer" target='blank' className='portfolio__link'>Статичный сайт
 							<span className='portfolio__icon'>&#8599;</span>

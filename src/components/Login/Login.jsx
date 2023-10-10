@@ -18,7 +18,7 @@ export const Login = () => {
 				<Link to='/' className='form__link'>
 					<img className='form__logo' src={logo} alt="Логотип" />
 				</Link>
-				<h2 className='form__title'>Рады видеть!</h2>
+				<h1 className='form__title'>Рады видеть!</h1>
 				<form className='form__auth' name='form-login' onSubmit={handleSubmit}>
 					<div className='form__wrapper'>
 						<p className='form__caption'>E-mail</p>

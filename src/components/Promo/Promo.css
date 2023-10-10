@@ -1,6 +1,5 @@
 .promo {
-	background-color: #073042;
-	position: relative;
+	background: url(../../images/logo-promo.svg) no-repeat 50% 40% #073042;
 }
 
 .promo__title {
@@ -15,22 +14,13 @@
 	max-width: 730px;
 }
 
-.logo-promo {
-	width: 320px;
-	height: 320px;
-	position: absolute;
-	left: 50%;
-	top: 46%;
-	transform: translate(-50%, -50%);
-}
-
 @media screen and (max-width: 1023px) {
-	.promo__title {
-		padding: 326px 0 342px 0;
+	.promo {
+		background-position-y: 48%;
 	}
 
-	.logo-promo {
-		top: 49%
+	.promo__title {
+		padding: 326px 0 342px 0;
 	}
 
 }
@@ -43,9 +33,8 @@
 		max-width: 300px;
 	}
 
-	.logo-promo {
-		width: 248px;
-		height: 248px;
-		top: 47%;
+	.promo {
+		background-size: 248px;
+		background-position-y: 44%;
 	}
 }

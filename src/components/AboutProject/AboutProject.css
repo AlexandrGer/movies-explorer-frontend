@@ -14,12 +14,11 @@
 .section__title {
 	font-size: 22px;
 	font-weight: 400;
-	line-height: 26.63px;
+	line-height: 27px;
 	letter-spacing: -0.04em;
 	margin: 0;
 	padding-bottom: 23px;
 	border-bottom: 1px solid #DADADA;
-	height: 27px;
 }
 
 .about-project-info {
@@ -67,13 +66,13 @@
 .deadlines__text {
 	font-size: 14px;
 	font-weight: 400;
-	line-height: 16.94px;
+	line-height: 17px;
 	letter-spacing: 0em;
 	text-align: center;
 	margin: 0 0 14px;
 	padding: 9px 0;
 	background: #303030;
-	height: 18px;
+
 }
 
 .deadlines__text_theme_green {
@@ -147,9 +146,8 @@
 
 	.section__title {
 		font-size: 18px;
-		line-height: 21.78px;
+		line-height: 22px;
 		padding-bottom: 28px;
-		height: 22px;
 	}
 
 	.about-project-info {
@@ -167,9 +165,8 @@
 
 	.about-project-info__heading {
 		font-size: 18px;
-		line-height: 21.78px;
+		line-height: 22px;
 		margin: 0 0 16px;
-		height: 44px;
 	}
 
 	.about-project-info__text {
@@ -184,15 +181,14 @@
 
 	.deadlines__text {
 		font-size: 11px;
-		line-height: 13.31px;
+		line-height: 13px;
 		margin: 0 0 10px;
 		padding: 11px 0;
-		height: 13px;
 	}
 
 	.deadlines__caption {
 		font-size: 11px;
 		font-weight: 400;
-		line-height: 13.31px;
+		line-height: 13px;
 	}
 }

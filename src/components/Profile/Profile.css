@@ -55,7 +55,7 @@
 	line-height: 13.31px;
 	letter-spacing: 0px;
 	text-align: right;
-	height: 14px;
+	min-height: 14px;
 	background: #202020;
 	color: #fff;
 	border: 0;
@@ -79,7 +79,6 @@
 	display: block;
 	margin-top: 10px;
 	visibility: visible;
-	height: 12px;
 }
 
 .profile__error_margin {
@@ -96,7 +95,7 @@
 	line-height: 13px;
 	text-align: center;
 	margin-top: 167px;
-	height: 14px;
+	min-height: 14px;
 	margin-bottom: 20px;
 }
 

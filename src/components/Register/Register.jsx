@@ -18,7 +18,7 @@ export const Register = () => {
 				<Link to='/' className='form__link'>
 					<img className='form__logo' src={logo} alt="Логотип" />
 				</Link>
-				<h2 className='form__title'>Добро пожаловать!</h2>
+				<h1 className='form__title'>Добро пожаловать!</h1>
 				<form className='form__auth' name='form-reg' onSubmit={handleSubmit}>
 					<div className='form__wrapper'>
 						<p className='form__caption'>Имя</p>

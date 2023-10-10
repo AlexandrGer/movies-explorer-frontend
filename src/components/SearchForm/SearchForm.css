@@ -10,7 +10,7 @@
 .search-form__input {
 	width: 100%;
 	background: #2F2F2F;
-	height: 46px;
+	min-height: 46px;
 	border-radius: 40px;
 	border: none;
 	padding: 0 0 0 22px;
@@ -60,7 +60,6 @@
 	margin-top: 10px;
 	/* display: none; */
 	visibility: visible;
-	height: 12px;
 }
 
 .search-form__error_hidden {

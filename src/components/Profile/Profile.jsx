@@ -18,7 +18,7 @@ export const Profile = () => {
 
 		<section className="profile">
 			<div className='profile__container'>
-				<h2 className='profile__title'>Привет, Виталий!</h2>
+				<h1 className='profile__title'>Привет, Виталий!</h1>
 				<form className='profile__form' name='form-profile' onSubmit={handleSubmit}>
 					<div className='profile__wrapper'>
 						<p className='profile__caption'>Имя</p>

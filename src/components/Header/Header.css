@@ -2,7 +2,7 @@
 	width: 100%;
 	background: #202020;
 	margin: 0 auto;
-	height: 74px;
+	min-height: 74px;
 	display: flex;
 	align-items: center;
 }

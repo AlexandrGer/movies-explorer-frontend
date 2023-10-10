@@ -37,7 +37,7 @@
 
 .stack__cell {
 	width: 90px;
-	height: 60px;
+	min-height: 60px;
 	border-radius: 10px;
 	background: #303030;
 	display: flex;
@@ -80,12 +80,21 @@
 
 	.stack__cell {
 		width: 84px;
-		height: 57px;
+		min-height: 57px;
 	}
 
 	.stack__text {
 		font-size: 12px;
 		line-height: 14.52px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.stack {
+		margin: 50px auto 0;
+		display: grid;
+		grid-template-columns: 84px 84px;
+		grid-gap: 10px;
 	}
 }
 
@@ -105,13 +114,6 @@
 		line-height: 16px;
 		margin: 24px auto 0;
 		max-width: 292px;
-	}
-
-	.stack {
-		margin: 50px auto 0;
-		display: grid;
-		grid-template-columns: 84px 84px;
-		grid-gap: 10px;
 	}
 
 	.stack__cell:not(:last-child) {

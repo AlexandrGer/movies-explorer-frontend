@@ -50,14 +50,7 @@
 	opacity: 0.8;
 }
 
-.navigation__button {
-	width: 100px;
-	height: 32px;
-	background-image: url(../../images/account.svg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100px 32px;
-	background-color: rgba(32, 32, 32, 0);
+.navigation__img {
 	box-shadow: 0px 3px 14px 0px #00000014;
 	border-radius: 40px;
 }

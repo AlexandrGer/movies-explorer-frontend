@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './Navigation.css';
+import account from '../../images/account.svg';
 
 export const Navigation = ({ onClose }) => {
 	return (
@@ -26,13 +27,8 @@ export const Navigation = ({ onClose }) => {
 					</NavLink>
 				</li>
 			</ul>
-			<Link to="/profile" className='navigation__link-account'>
-				<button
-					className="button navigation__button"
-					type='button'
-					aria-label="Аккаунт"
-					onClick={onClose}>
-				</button>
+			<Link to="/profile" className='navigation__link-account' onClick={onClose}>
+				<img className='navigation__img' src={account} alt="Аккаунт" />
 			</Link >
 		</nav >
 

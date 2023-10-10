@@ -13,6 +13,7 @@ import { PageNotFound } from '../PageNotFound/PageNotFound';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 // Временно
 import { initialMovies } from '../moviesList';
+import { Footer } from '../Footer/Footer';
 
 
 function App() {
@@ -37,30 +38,34 @@ function App() {
 				{pathname === '/' || pathname === '/movies' || pathname === '/saved-movies' || pathname === '/profile' ? (
 					<Header isLoggedIn={isLoggedIn} onOpen={burgerOpen} onClose={burgerClose} />) : ('')}
 				{isLoggedIn && <BurgerMenu onOpen={burgerIsOpened} onClose={burgerClose} />}
-				<Routes>
-					<Route path='/signup' element={<Register />} />
-					<Route path='/signin' element={<Login />} />
-					<Route path='/' element={<Main />} />
-					<Route path='/movies' element={
-						<ProtectedRoute
-							element={Movies}
-							isLoggedIn={isLoggedIn}
-							movies={movies}
-						/>}
-					/>
-					<Route path='/saved-movies' element={
-						<ProtectedRoute
-							element={SavedMovies}
-							isLoggedIn={isLoggedIn}
-							movies={movies}
-						/>} />
-					<Route path='/profile' element={
-						<ProtectedRoute
-							element={Profile}
-							isLoggedIn={isLoggedIn}
-						/>} />
-					<Route path='*' element={<PageNotFound />} />
-				</Routes>
+				<main>
+					<Routes>
+						<Route path='/signup' element={<Register />} />
+						<Route path='/signin' element={<Login />} />
+						<Route path='/' element={<Main />} />
+						<Route path='/movies' element={
+							<ProtectedRoute
+								element={Movies}
+								isLoggedIn={isLoggedIn}
+								movies={movies}
+							/>}
+						/>
+						<Route path='/saved-movies' element={
+							<ProtectedRoute
+								element={SavedMovies}
+								isLoggedIn={isLoggedIn}
+								movies={movies}
+							/>} />
+						<Route path='/profile' element={
+							<ProtectedRoute
+								element={Profile}
+								isLoggedIn={isLoggedIn}
+							/>} />
+						<Route path='*' element={<PageNotFound />} />
+					</Routes>
+				</main>
+				{pathname === '/' || pathname === '/movies' || pathname === '/saved-movies' ? (<Footer></Footer>) : ''}
+
 			</div>
 		</div>
 	);

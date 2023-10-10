@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Movies/Movies.css';
 import { SearchForm } from '../SearchForm/SearchForm';
-import { Footer } from '../Footer/Footer';
 import { MoviesCardList } from '../MoviesCardList/MoviesCardList';
 
 export const SavedMovies = ({ movies }) => {
@@ -14,7 +13,6 @@ export const SavedMovies = ({ movies }) => {
 			<MoviesCardList
 				movies={movies}>
 			</MoviesCardList>
-			<Footer></Footer>
 		</div>
 	);
 }
