@@ -2,34 +2,21 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import '../FormAuth/FormAuth.css';
+import { useFormWithValidation } from '../../hooks/useFormValidator';
 
-export const Register = ({ onRegister }) => {
-
-	const [isValid, setIsValid] = useState(true);
-
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
-	const [name, setName] = useState('')
-
-	function handleChangeName(e) {
-		setName(e.target.value);
-	}
-
-	function handleChangeEmail(e) {
-		setEmail(e.target.value);
-	}
-
-	function handleChangePassword(e) {
-		setPassword(e.target.value);
-	}
+export const Register = ({ onRegister, onError }) => {
+	const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
 
 	function handleSubmit(e) {
 		e.preventDefault();
+
 		onRegister({
-			name: name,
-			password: password,
-			email: email
+			name: values.name,
+			email: values.email,
+			password: values.password
 		})
+
+		resetForm();
 	}
 
 	return (
@@ -40,46 +27,44 @@ export const Register = ({ onRegister }) => {
 					<img className='form__logo' src={logo} alt="Логотип" />
 				</Link>
 				<h1 className='form__title'>Добро пожаловать!</h1>
-				<form className='form__auth' name='form-reg' onSubmit={handleSubmit}>
+				<form className='form__auth' name='form-reg' onSubmit={handleSubmit} noValidate>
 					<div className='form__wrapper'>
 						<p className='form__caption'>Имя</p>
 						<input
-							// className={isValid ? 'form__input' : 'form__input form__input_error'}
-							className='form__input'
+							className={errors.name ? 'form__input form__input_error' : 'form__input'}
 							name='name'
 							type='text'
 							placeholder='Имя'
-							value={name || ''}
-							onChange={handleChangeName}
+							value={values.name || ''}
+							onChange={handleChange}
 							required />
-						<span className={isValid ? 'form__error form__error_hidden' : 'form__error'}></span>
+						<span className={errors.name ? 'form__error' : 'form__error'}>{errors.name}</span>
 					</div>
 					<div className='form__wrapper'>
 						<p className='form__caption'>E-mail</p>
 						<input
-							// className={isValid ? 'form__input' : 'form__input form__input_error'}
-							className='form__input'
+							className={errors.email ? 'form__input form__input_error' : 'form__input'}
 							name='email'
 							type='email'
 							placeholder='E-mail'
-							value={email || ''}
-							onChange={handleChangeEmail}
+							value={values.email || ''}
+							onChange={handleChange}
 							required />
-						<span className={isValid ? 'form__error form__error_hidden' : 'form__error'}></span>
+						<span className={errors.email ? 'form__error' : 'form__error'}>{errors.email}</span>
 					</div>
 					<div className='form__wrapper'>
 						<p className='form__caption'>Пароль</p>
 						<input
-							className={isValid ? 'form__input' : 'form__input form__input_error'}
+							className={errors.password ? 'form__input form__input_error' : 'form__input'}
 							name='password'
 							type='password'
 							placeholder='Пароль'
-							value={password || ''}
-							onChange={handleChangePassword}
+							value={values.password || ''}
+							onChange={handleChange}
 							required />
-						<span className={isValid ? 'form__error form__error_hidden' : 'form__error'}></span>
+						<span className={errors.password ? 'form__error' : 'form__error'}>{errors.password}</span>
 					</div>
-					<span className='form__error form__error_type_server form__error_hidden'></span>
+					<span className='form__error form__error_type_server'>{onError}</span>
 					<button
 						className={isValid ? 'button form__button' : 'button form__button form__button_disable'}
 						type='submit'

@@ -15,29 +15,35 @@ class Auth {
 		if (res.ok) {
 			return res.json();
 		} else {
-			return Promise.reject(`Возникла ошибка: ${res.status}`)
+			return (res.json())
+				.then((err) => {
+					const error = new Error(err.message);
+					error.status = res.status;
+					throw error;
+				})
 		}
 	}
 
-	register(data) {
+
+	register({ name, email, password }) {
 		return fetch(`${this._url}/signup`, {
 			method: 'POST',
 			headers: this._headers,
 			body: JSON.stringify({
-				name: data.name,
-				password: data.password,
-				email: data.email
+				name: name,
+				password: password,
+				email: email
 			})
 		}).then(this._handleResponse)
 	}
 
-	authorize(password, email) {
+	authorize({ email, password }) {
 		return fetch(`${this._url}/signin`, {
 			method: 'POST',
 			headers: this._headers,
 			body: JSON.stringify({
-				password,
-				email
+				email: email,
+				password: password
 			})
 		}).then(this._handleResponse);
 	}
