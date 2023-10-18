@@ -1,13 +1,12 @@
-import React, { useState, useContext, useEffect, useCallback } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './Profile.css';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { useFormWithValidation } from '../../hooks/useFormValidator';
 
-export const Profile = ({ onSignOut, onEditUserInfo, onError }) => {
+export const Profile = ({ onSignOut, onEditUserInfo, onError, isLoading }) => {
 
-	const [isVisible, setIsVisible] = useState(false)
+	const [isVisible, setIsVisible] = useState(false) //видимость кнопки сохранить
 	const [isDisable, setIsDisable] = useState(false);
-	const [error, setError] = useState('');
 	const currentUser = useContext(CurrentUserContext);
 
 	const { values, setValues, handleChange, errors, isValid, resetForm } = useFormWithValidation();
@@ -57,7 +56,10 @@ export const Profile = ({ onSignOut, onEditUserInfo, onError }) => {
 							value={values.name || ''}
 							onChange={handleChange}
 							required
-							disabled={isVisible ? false : true} />
+							minLength='2'
+							maxLength='30'
+							autoComplete='off'
+							disabled={(isVisible ? false : true) || isLoading} />
 					</div>
 					<span className={errors.name ? 'profile__error profile__error_margin' : 'profile__error'}>{errors.name}</span>
 					<div className='profile__wrapper'>
@@ -70,12 +72,14 @@ export const Profile = ({ onSignOut, onEditUserInfo, onError }) => {
 							value={values.email || ''}
 							onChange={handleChange}
 							required
-							disabled={isVisible ? false : true} />
+							pattern='^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$'
+							autoComplete='off'
+							disabled={(isVisible ? false : true) || isLoading} />
 					</div>
 					<span className={errors.email ? 'profile__error' : 'profile__error'}>{errors.email}</span>
 					<div className='profile__container-button'>
 						{isVisible ? (<>
-							<span className='profile__error profile__error_type_server' >{onError || error}</span>
+							<span className='profile__error profile__error_type_server' >{onError && 'При обновлении профиля произошла ошибка'}</span>
 							<button
 								className={!isValid || !isDisable ? 'button profile__button profile__button_type_save profile__button_disable' : 'button profile__button profile__button_type_save '}
 								type='submit'

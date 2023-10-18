@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import '../FormAuth/FormAuth.css';
 import { useFormWithValidation } from '../../hooks/useFormValidator';
 
-export const Register = ({ onRegister, onError }) => {
+export const Register = ({ onRegister, onError, isLoading }) => {
 	const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
 
 	function handleSubmit(e) {
@@ -37,7 +37,11 @@ export const Register = ({ onRegister, onError }) => {
 							placeholder='Имя'
 							value={values.name || ''}
 							onChange={handleChange}
-							required />
+							required
+							minLength='2'
+							maxLength='30'
+							autoComplete='off'
+							disabled={isLoading} />
 						<span className={errors.name ? 'form__error' : 'form__error'}>{errors.name}</span>
 					</div>
 					<div className='form__wrapper'>
@@ -49,7 +53,10 @@ export const Register = ({ onRegister, onError }) => {
 							placeholder='E-mail'
 							value={values.email || ''}
 							onChange={handleChange}
-							required />
+							required
+							pattern='^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$'
+							autoComplete='off'
+							disabled={isLoading} />
 						<span className={errors.email ? 'form__error' : 'form__error'}>{errors.email}</span>
 					</div>
 					<div className='form__wrapper'>
@@ -61,7 +68,9 @@ export const Register = ({ onRegister, onError }) => {
 							placeholder='Пароль'
 							value={values.password || ''}
 							onChange={handleChange}
-							required />
+							required
+							autoComplete='off'
+							disabled={isLoading} />
 						<span className={errors.password ? 'form__error' : 'form__error'}>{errors.password}</span>
 					</div>
 					<span className='form__error form__error_type_server'>{onError}</span>

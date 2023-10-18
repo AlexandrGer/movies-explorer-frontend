@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import '../FormAuth/FormAuth.css';
 import { useFormWithValidation } from '../../hooks/useFormValidator';
 
-export const Login = ({ onLogin, onError }) => {
+export const Login = ({ onLogin, onError, isLoading }) => {
 
 	const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
 
@@ -37,7 +37,10 @@ export const Login = ({ onLogin, onError }) => {
 							placeholder='E-mail'
 							value={values.email || ''}
 							onChange={handleChange}
-							required />
+							required
+							pattern='^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$'
+							autoComplete='off'
+							disabled={isLoading} />
 						<span className={errors.email ? 'form__error' : 'form__error'}>{errors.email}</span>
 					</div>
 					<div className='form__wrapper'>
@@ -49,7 +52,9 @@ export const Login = ({ onLogin, onError }) => {
 							placeholder='Пароль'
 							value={values.password || ''}
 							onChange={handleChange}
-							required />
+							required
+							autoComplete='off'
+							disabled={isLoading} />
 						<span className={errors.password ? 'form__error' : 'form__error'}>{errors.password}</span>
 					</div>
 					<span className='form__error form__error_type_server form__error_margin'>{onError}</span>
