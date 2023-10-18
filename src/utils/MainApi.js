@@ -51,60 +51,38 @@ class Api {
 		})
 	}
 
-
-
-
-
-	// Загрузка карточек с сервера
-	getCards() {
-		return this._request(`${this._url}/cards`, {
+	// Получить сохраненные пользователем фильмы
+	getSavedMovies() {
+		return this._request(`${this._url}/movies`, {
 			method: 'GET',
 			headers: {
 				'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
-				'Content-type': 'application/json'
-			},
+				'Content-Type': 'application/json'
+			}
 		})
 	}
 
-	// Удаление карточки
-	deleteCard(cardId) {
-		return this._request(`${this._url}/cards/${cardId}`, {
+	// Добавить фильм в сохраненные
+	addMovie(movie) {
+		return this._request(`${this._url}/movies`, {
+			method: 'POST',
+			headers: {
+				'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(movie)
+		})
+	}
+
+	// Удалить фильм из сохраненных
+	deleteMovie(movieId) {
+		return this._request(`${this._url}/movies/${movieId}`, {
 			method: 'DELETE',
 			headers: {
 				'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
-				'Content-type': 'application/json'
+				'Content-Type': 'application/json'
 			},
 		})
-	}
-
-	// Постановка лайка
-	putLike(cardId) {
-		return this._request(`${this._url}/cards/${cardId}/likes`, {
-			method: 'PUT',
-			headers: {
-				'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
-				'Content-type': 'application/json'
-			},
-		})
-	}
-
-	// Удаление лайка
-	deleteLike(cardId) {
-		return this._request(`${this._url}/cards/${cardId}/likes`, {
-			method: 'DELETE',
-			headers: {
-				'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
-				'Content-type': 'application/json'
-			},
-		})
-	}
-
-	changeLikeCardStatus(cardId, isLiked) {
-		if (isLiked) {
-			return this.deleteLike(cardId);
-		} else {
-			return this.putLike(cardId);
-		}
 	}
 }
 

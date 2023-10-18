@@ -3,7 +3,7 @@ import './Profile.css';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { useFormWithValidation } from '../../hooks/useFormValidator';
 
-export const Profile = ({ onSignOut, onEditUserInfo, onError, isLoading }) => {
+export const Profile = ({ onSignOut, onEditUserInfo, onError, onSuccess, isLoading }) => {
 
 	const [isVisible, setIsVisible] = useState(false) //видимость кнопки сохранить
 	const [isDisable, setIsDisable] = useState(false);
@@ -79,7 +79,7 @@ export const Profile = ({ onSignOut, onEditUserInfo, onError, isLoading }) => {
 					<span className={errors.email ? 'profile__error' : 'profile__error'}>{errors.email}</span>
 					<div className='profile__container-button'>
 						{isVisible ? (<>
-							<span className='profile__error profile__error_type_server' >{onError && 'При обновлении профиля произошла ошибка'}</span>
+							<span className='profile__error profile__error_type_server' >{onError || onSuccess}</span>
 							<button
 								className={!isValid || !isDisable ? 'button profile__button profile__button_type_save profile__button_disable' : 'button profile__button profile__button_type_save '}
 								type='submit'

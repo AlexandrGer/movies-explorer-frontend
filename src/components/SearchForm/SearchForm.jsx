@@ -3,8 +3,7 @@ import './SearchForm.css';
 import { FilterCheckbox } from '../FilterCheckbox/FilterCheckbox';
 import { useLocation } from 'react-router-dom';
 
-export const SearchForm = ({ onSearch }) => {
-
+export const SearchForm = ({ onSearch, filterCheckbox, onError }) => {
 	const [error, setError] = useState('');
 	const { pathname } = useLocation();
 
@@ -27,17 +26,17 @@ export const SearchForm = ({ onSearch }) => {
 		if (pathname === '/movies') {
 			localStorage.setItem('movieName', movieName);
 		}
-		onSearch(movieName, shortFilms);
+		onSearch(movieName, shortFilms)
+
 	};
 
 	// Отслеживаем изменения чекбокса
 	const handleShortFilmsChange = () => {
 		setShortFilms(!shortFilms);
 		if (!movieName) {
-			setError('Нужно ввести поисковой запрос');
 			return;
 		}
-		onSearch(movieName, !shortFilms);
+		filterCheckbox(!shortFilms);
 		if (pathname === '/movies') {
 			localStorage.setItem('shortFilms', !shortFilms);
 		}
@@ -70,10 +69,11 @@ export const SearchForm = ({ onSearch }) => {
 					type='text'
 					placeholder="Фильм"
 					required
-					value={movieName}
+					value={movieName || ''}
+					autoComplete='off'
 					onChange={handleMovieChange}
 				/>
-				<span className={error ? 'search-form__error' : 'search-form__error search-form__error_hidden'}>{error}</span>
+				{onError ? <span className='search-form__error'>{onError}</span> : <span className='search-form__error'>{error}</span>}
 				<button
 					className="button search-form__button "
 					type="submit"

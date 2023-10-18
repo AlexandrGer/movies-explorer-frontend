@@ -1,20 +1,15 @@
 import { DURATION_MOVIES } from "./constants";
 
-export function filterSearchMovies(movies, movieName, shortFilms) {
-	if (!movies) {
-		return [];
-	}
-
+export function filterSearchMovies(movies, movieName) {
 	let filteredMovies = [...movies]
-
-	if (movieName) {
-		filteredMovies = filteredMovies.filter((item) => item.nameRU.toLowerCase()
-			.includes(movieName.toLowerCase()));
-	}
-
-	if (shortFilms) {
-		return filteredMovies.filter((item) => item.duration <= DURATION_MOVIES);
-	}
+	filteredMovies = filteredMovies.filter((item) => item.nameRU.toLowerCase().includes(movieName.toLowerCase()) ||
+		item.nameEN.toLowerCase().includes(movieName.toLowerCase()));
 
 	return (filteredMovies);
+}
+
+export function filterMoviesDuration(movies) {
+	return movies.filter((item) => {
+		return item.duration <= DURATION_MOVIES
+	})
 }

@@ -11,7 +11,7 @@ export const FilterCheckbox = ({ value, onChange }) => {
 					id='checkbox'
 					name='shortFilms'
 					type="checkbox"
-					checked={value}
+					checked={value || false}
 					onChange={onChange}
 				/>
 				<span className="filter-checkbox__slider"></span>
