@@ -9,7 +9,6 @@ import { AboutMe } from '../AboutMe/AboutMe';
 export const Main = () => {
 
 	return (
-
 		<>
 			<Promo></Promo>
 			<NavTab></NavTab>

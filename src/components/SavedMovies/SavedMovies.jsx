@@ -10,22 +10,26 @@ export const SavedMovies = ({ savedMovies, onDeleteMovie }) => {
 	const [movies, setMovies] = useState(JSON.parse(localStorage.getItem('savedMovies')));
 
 	function handleSearchMovies(movieName, shortFilms) {
-		const savedMovies = JSON.parse(localStorage.getItem('savedMovies'));
-		let filteredMovies = filterSearchMovies(savedMovies, movieName);
+		const filteredMovies = filterSearchMovies(savedMovies, movieName);
 		localStorage.setItem('filteredSavedMovies', JSON.stringify(filteredMovies));
+
+
+		setMovies(filteredMovies);
 		filter(shortFilms);
 	}
 
 	function filter(shortFilms) {
 		const filteredMovies = JSON.parse(localStorage.getItem('filteredSavedMovies')) || [];
-
 		const resultMovies = shortFilms
-			? filterMoviesDuration(filteredMovies)
+			? filterMoviesDuration(movies)
 			: filteredMovies;
-
 		setMovies(resultMovies);
 	}
 
+	useEffect(() => {
+		localStorage.setItem('savedMovies', JSON.stringify(savedMovies));
+		setMovies(JSON.parse(localStorage.getItem('savedMovies')));
+	}, [savedMovies]);
 
 	return (
 		<div className="movies">

@@ -4,6 +4,10 @@
 	border-radius: 6px;
 }
 
+.movies-card_delete {
+	display: none;
+}
+
 .movies-card:hover {
 	cursor: pointer;
 }

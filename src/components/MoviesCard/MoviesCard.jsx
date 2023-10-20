@@ -36,11 +36,8 @@ export const MoviesCard = ({ movie, savedMovies, onLikeMovie, onDeleteMovie }) =
 		}
 	}
 
-	function handleDelete(e) {
+	function handleDelete() {
 		onDeleteMovie(movie)
-		if (pathname === '/saved-movies') {
-			e.target.closest('.movies-card').remove();
-		}
 	}
 
 	return (

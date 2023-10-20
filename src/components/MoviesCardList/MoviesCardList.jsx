@@ -21,7 +21,7 @@ export const MoviesCardList = ({ movies, savedMovies, onLikeMovie, onDeleteMovie
 	const [count, setCount] = useState(DESKTOP_MAX_MOVIES);
 	const [moreCount, setMoreCount] = useState(DESKTOP_MORE_STEP);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		onResize()
 		window.addEventListener("resize", onResize)
 
