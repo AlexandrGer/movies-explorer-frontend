@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import '../FormAuth/FormAuth.css';
+import { useFormWithValidation } from '../../hooks/useFormValidator';
 
-export const Register = () => {
-
-	const [isValid, setIsValid] = useState(false);
+export const Register = ({ onRegister, onError, isLoading }) => {
+	const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
 
 	function handleSubmit(e) {
 		e.preventDefault();
+
+		onRegister({
+			name: values.name,
+			email: values.email,
+			password: values.password
+		})
+
+		resetForm();
 	}
 
 	return (
@@ -19,40 +27,53 @@ export const Register = () => {
 					<img className='form__logo' src={logo} alt="Логотип" />
 				</Link>
 				<h1 className='form__title'>Добро пожаловать!</h1>
-				<form className='form__auth' name='form-reg' onSubmit={handleSubmit}>
+				<form className='form__auth' name='form-reg' onSubmit={handleSubmit} noValidate>
 					<div className='form__wrapper'>
 						<p className='form__caption'>Имя</p>
 						<input
-							// className={isValid ? 'form__input' : 'form__input form__input_error'}
-							className='form__input'
+							className={errors.name ? 'form__input form__input_error' : 'form__input'}
 							name='name'
 							type='text'
 							placeholder='Имя'
-							required />
-						<span className={isValid ? 'form__error form__error_hidden' : 'form__error'}></span>
+							value={values.name || ''}
+							onChange={handleChange}
+							required
+							minLength='2'
+							maxLength='30'
+							autoComplete='off'
+							disabled={isLoading} />
+						<span className={errors.name ? 'form__error' : 'form__error'}>{errors.name}</span>
 					</div>
 					<div className='form__wrapper'>
 						<p className='form__caption'>E-mail</p>
 						<input
-							// className={isValid ? 'form__input' : 'form__input form__input_error'}
-							className='form__input'
+							className={errors.email ? 'form__input form__input_error' : 'form__input'}
 							name='email'
 							type='email'
 							placeholder='E-mail'
-							required />
-						<span className={isValid ? 'form__error form__error_hidden' : 'form__error'}></span>
+							value={values.email || ''}
+							onChange={handleChange}
+							required
+							pattern='^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$'
+							autoComplete='off'
+							disabled={isLoading} />
+						<span className={errors.email ? 'form__error' : 'form__error'}>{errors.email}</span>
 					</div>
 					<div className='form__wrapper'>
 						<p className='form__caption'>Пароль</p>
 						<input
-							className={isValid ? 'form__input' : 'form__input form__input_error'}
+							className={errors.password ? 'form__input form__input_error' : 'form__input'}
 							name='password'
 							type='password'
 							placeholder='Пароль'
-							required />
-						<span className={isValid ? 'form__error form__error_hidden' : 'form__error'}>Что-то пошло не так...</span>
+							value={values.password || ''}
+							onChange={handleChange}
+							required
+							autoComplete='off'
+							disabled={isLoading} />
+						<span className={errors.password ? 'form__error' : 'form__error'}>{errors.password}</span>
 					</div>
-					<span className='form__error form__error_type_server form__error_hidden'>При регистрации пользователя произошла ошибка.</span>
+					<span className='form__error form__error_type_server'>{onError}</span>
 					<button
 						className={isValid ? 'button form__button' : 'button form__button form__button_disable'}
 						type='submit'

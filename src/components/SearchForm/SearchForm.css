@@ -60,6 +60,7 @@
 	margin-top: 10px;
 	/* display: none; */
 	visibility: visible;
+	min-height: 14px;
 }
 
 .search-form__error_hidden {
